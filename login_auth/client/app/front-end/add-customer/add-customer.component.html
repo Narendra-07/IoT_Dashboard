@@ -1,0 +1,56 @@
+<form #addCustomerForm="ngForm" (ngSubmit)="addCustomerForm.valid && onSubmit(addCustomerForm)">
+
+  <div class="wrapper">
+    <div id="formContent">
+      <h2 class="underlineHover">Add new customer</h2>
+
+      <input type="text" #companyId="ngModel" [(ngModel)]="customerService.selectedCustomer.company_id"
+        name="company_id" placeholder="Company ID" required
+        [ngClass]="{'invalid-textbox' :addCustomerForm.submitted && !companyId.valid }" autofocus>
+      <div *ngIf="addCustomerForm.submitted && !companyId.valid">
+        <label class="validation-message">This field is required.</label>
+      </div>
+
+      <input type="text" #companyName="ngModel" [(ngModel)]="customerService.selectedCustomer.company_name"
+        name="company_name" placeholder="Company Name" required
+        [ngClass]="{'invalid-textbox' :addCustomerForm.submitted && !companyName.valid }">
+      <div *ngIf="addCustomerForm.submitted && !companyName.valid">
+        <label class="validation-message">This field is required.</label>
+      </div>
+
+      <input type="text" #address="ngModel" [(ngModel)]="customerService.selectedCustomer.address" name="address"
+        placeholder="Address" required [ngClass]="{'invalid-textbox':addCustomerForm.submitted && !address.valid }">
+      <div *ngIf="addCustomerForm.submitted && !address.valid">
+        <label class="validation-message">This field is required.</label>
+      </div>
+    
+
+      <!--  Create date field in server side -->
+
+
+     <div>
+      <input type="text" #createdBy="ngModel" [(ngModel)]="tokenValue" name="createdBy"
+      required>
+    </div>
+     
+   <div>
+      <input type="text"  [(ngModel)]="path" name="path"
+      required>
+    </div>       
+         
+        <input type="submit" value="Create Customer" >
+      
+  </div>
+  </div>
+</form>
+
+<!-- Success message -->
+<div class="success" *ngIf="showSucessMessage">
+  Customer added successfully
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>
+

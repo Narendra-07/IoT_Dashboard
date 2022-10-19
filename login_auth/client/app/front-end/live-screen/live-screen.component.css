@@ -1,0 +1,88 @@
+.squares {
+    display: flex;
+    justify-content: center;
+  }
+  .dial {
+    position: relative;
+    top: 70px;
+    
+  }
+   .speedometer {
+   position: relative;
+   top: 30px;
+   right: 50px;
+  } 
+
+  .speedometer1 {
+    position: relative; 
+    bottom: 150px; 
+    margin-left: 220px;  
+  } 
+
+  .pressure1,
+  .pressure2,
+  .pressure3,
+  .pressure4 {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #F5F8FA;   
+      bottom: 130px;
+  }
+  
+   .pressure1 {
+          margin-right: 10%;
+          border-style: solid;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }   
+  
+   .pressure2 {
+         margin-right: 10%;
+          border-style: solid;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          }
+    .pressure3 {
+            margin-right: 10%;
+            border-style: solid;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            }
+    .pressure4 {
+                border-style: solid;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                }
+       .pr  {
+        width: 100%;
+        height: 60%; 
+        text-align: center;
+        color: white;
+        background: rgb(55, 55, 229);
+      }            
+      .subpr h1 {
+        margin: auto;
+        line-height: 51px;
+        vertical-align: middle;
+        display: inline;
+      } 
+     .lastDate h4 {
+      display: inline;
+     }
+     .deviceConnectedStyle {
+      color: green;
+      display: inline-flex;
+     }
+     .deviceNotonnectedStyle {
+      color: red;
+      display: inline-flex;
+     }

@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="https://icon-library.com/icon/arduino-icon-9.html.html">
+<mat-tree [dataSource]="treeService.dataSource" [treeControl]="treeService.treeControl">
+  <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+    <!--matTreeNodePadding is to display the level information of a flat tree node. -->
+    <!-- use a disabled button to provide padding for tree leaf -->
+    <!-- <button mat-icon-button disabled></button> -->
+    <!-- <mat-checkbox class="checklist-leaf-node" [checked]="checklistSelection.isSelected(node)" (click)="logNode(node)"> -->
+      <button mat-button (click)="treeService.checklistSelection.isSelected(node)" (click)="treeService.logNode(node)">
+        <mat-icon [ngStyle]="{'color':'black'}">developer_board</mat-icon>
+      
+        {{node.name}}
+      </button>
+    <!-- </mat-checkbox> -->
+  </mat-tree-node>
+  <!-- This is the tree node template for expandable nodes -->
+
+  <mat-tree-node *matTreeNodeDef="let node;when: treeService.hasChild" matTreeNodePadding>
+    <mat-checkbox color="white" class="checklist-leaf-node" [checked]="treeService.checklistSelection.isSelected(node)" (click)="treeService.logNode(node)" (change)="treeService.todoItemSelectionToggle(node)">
+    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+      <mat-icon class="mat-icon-rtl-mirror">
+        {{ treeService.treeControl.isExpanded(node) ?'expand_more' : 'chevron_right'}}
+      </mat-icon>
+    </button>
+    <!-- <mat-icon color="warning">folder</mat-icon> -->
+    {{node.name}}
+    </mat-checkbox>
+
+  </mat-tree-node>
+</mat-tree>
+
+<!-- <app-add-customer  [parentChildNode]="parentNodePath"></app-add-customer> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="sample-wrapper">
+  <igx-tree class="tree-root" >
+      <igx-tree-node *ngFor="let node of dataSource.data">
+        <button mat-button (click)="logNode(node)">
+          {{ node.name }}
+          </button>
+          <igx-tree-node *ngFor="let value of node.children">
+            <button mat-button (click)="logNode(node)">
+              {{ value.name }}
+              </button>
+              <igx-tree-node *ngFor="let value2 of value.children">
+                <button mat-button (click)="logNode(node)">
+                  {{ value2.name }}
+                  </button>
+              </igx-tree-node>
+          </igx-tree-node>
+      </igx-tree-node>
+  </igx-tree>
+</div> -->

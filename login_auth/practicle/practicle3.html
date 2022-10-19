@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript email validation</title>
+    <style>
+        li {
+            list-style-type: none;
+            font-size: 16pt;
+        }
+
+        .mail {
+            margin: auto;
+            padding-top: 40px;
+            padding-bottom: 10px;
+            width: 800px;
+            background: rgb(153, 198, 211);
+            border: 1px soild rgb(1, 20, 24);
+        }
+
+        .mail h2 {
+            margin-left: 38px;
+        }
+
+        input {
+            font-size: 20pt;
+        }
+
+        input:focus,
+        textarea:focus {
+            background-color: lightyellow;
+        }
+
+        input submit {
+            font-size: 10pt;
+        }
+    </style>
+</head>
+
+<body onload='document.form1.text1.focus()'>
+    <div class="mail">
+        <h2>Enter email to Validate</h2>
+        <form name="form1" action="#">
+            <ul>
+                <li><input type='text' name='text1' /></li>
+                <li> </li>
+                <li class="Validate"><input type="submit" name="Validate" value="Validate"
+                        onclick="ValidateEmail(document.form1.text1)" /></li>
+                <li> </li>
+            </ul>
+        </form>
+    </div>
+    <script src="practicle3.js"></script>
+
+</body>
+
+</html>

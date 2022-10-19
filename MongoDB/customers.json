@@ -1,0 +1,166 @@
+[{
+  "_id": {
+    "$oid": "61ea9341daa86b40da2c0fee"
+  },
+  "company_id": "10011",
+  "company_name": "Technovision1",
+  "address": "Bavdhan,Pune",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-01-21T11:04:33.369Z"
+  },
+  "path": [
+    "embone"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ea936fdaa86b40da2c0ff0"
+  },
+  "company_id": "10012",
+  "company_name": "Technovision2 ",
+  "address": "Bavdhan,Pune",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-01-21T11:05:19.605Z"
+  },
+  "path": [
+    "embone"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61ea93a0daa86b40da2c0ff2"
+  },
+  "company_id": "10013",
+  "company_name": "TATA 1",
+  "address": "Pune",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-01-21T11:06:08.888Z"
+  },
+  "path": [
+    "embone/Technovision"
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fa66a89ed961f37388eee1"
+  },
+  "path": [
+    "embone/Technovision2 "
+  ],
+  "company_id": "100018",
+  "company_name": "renu",
+  "address": "pune",
+  "createdBy": "Embone Technologies",
+  "createdDate": {
+    "$date": "2022-02-02T11:10:32.098Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fe0177b3cf7170ac6194ac"
+  },
+  "path": [
+    "embone/Technovision1"
+  ],
+  "company_id": "1000001",
+  "company_name": "TATA1",
+  "address": "Pune",
+  "createdBy": "Technovision1",
+  "createdDate": {
+    "$date": "2022-02-05T04:47:51.666Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fe0b727a8df05ac4227995"
+  },
+  "path": [
+    "embone"
+  ],
+  "company_id": "100001",
+  "company_name": "Cognizant",
+  "address": "pune",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-02-05T05:30:26.283Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200d81dad1204271a2f8a4d"
+  },
+  "path": [
+    "Technovision1/TATA1/Atos"
+  ],
+  "company_id": "1",
+  "company_name": "Atos1",
+  "address": "pune",
+  "createdBy": "Tata",
+  "createdDate": {
+    "$date": "2022-02-07T08:28:13.668Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6200faa7ad1204271a2f8b23"
+  },
+  "path": [
+    "embone/Technovision1/TATA1"
+  ],
+  "company_id": "11",
+  "company_name": "TATA2",
+  "address": "Pune",
+  "createdBy": "Sujit Dhere",
+  "createdDate": {
+    "$date": "2022-02-07T10:55:35.371Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62011c6ead1204271a2f8b6b"
+  },
+  "path": [
+    "embone/Technovision1/TATA1"
+  ],
+  "company_id": "111111111111111",
+  "company_name": "tgftf",
+  "address": "okoioi",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-02-07T13:19:42.765Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62013442ad1204271a2f8b76"
+  },
+  "path": [
+    "embone/Technovision1/TATA1"
+  ],
+  "company_id": "2",
+  "company_name": "TATA2",
+  "address": "pune",
+  "createdBy": "Sujit Dhere",
+  "createdDate": {
+    "$date": "2022-02-07T15:01:22.578Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62015316ac8c4ec8c26a5ef0"
+  },
+  "path": [
+    "embone"
+  ],
+  "company_id": "253",
+  "company_name": "wipro",
+  "address": "pune",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-02-07T17:12:54.877Z"
+  },
+  "__v": 0
+}]

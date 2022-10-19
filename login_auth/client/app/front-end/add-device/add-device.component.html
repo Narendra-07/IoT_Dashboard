@@ -1,0 +1,54 @@
+<form #addDeviceForm="ngForm" (ngSubmit)="addDeviceForm.valid && onSubmit(addDeviceForm)">
+    <div class="wrapper">
+        <div id="formContent">
+          <h2 class="underlineHover">Add new device</h2>
+    
+          <input type="text" #UID="ngModel" [(ngModel)]="deviceService.selectedDevice.UID"
+            name="UID" placeholder="UID" required
+            [ngClass]="{'invalid-textbox' :addDeviceForm.submitted && !UID.valid }" autofocus>
+          <div *ngIf="addDeviceForm.submitted && !UID.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+    
+          <input type="text" #deviceName="ngModel" [(ngModel)]="deviceService.selectedDevice.deviceName"
+            name="deviceName" placeholder="Device Name" required
+            [ngClass]="{'invalid-textbox' :addDeviceForm.submitted && !deviceName.valid }">
+          <div *ngIf="addDeviceForm.submitted && !deviceName.valid">
+            <label class="validation-message">This field is required.</label>
+          </div>
+    
+          <!-- <input type="text" #address="ngModel" [(ngModel)]="deviceService.selectedCustomer.address" name="address"
+            placeholder="Address" required [ngClass]="{'invalid-textbox':addDeviceForm.submitted && !address.valid }">
+          <div *ngIf="addDeviceForm.submitted && !address.valid">
+            <label class="validation-message">This field is required.</label>
+          </div> -->
+        
+    
+          <!--  Create date field in server side -->
+    
+    
+         <div>
+          <input type="text" #createdBy="ngModel" [(ngModel)]="tokenValue" name="createdBy"
+          required>
+        </div>
+         
+       <!-- <div>
+          <input type="text"  [(ngModel)]="path" name="path"
+          required>
+        </div>        -->
+    
+            <input type="submit" value="Create Device" >
+      </div>
+      </div>
+    </form>
+    
+    <!-- Success message -->
+    <div class="success" *ngIf="showSucessMessage">
+      Device added successfully
+    </div>
+    
+    <!-- Error message -->
+    <div class="alert" *ngIf="serverErrorMessages">
+      {{serverErrorMessages}}
+    </div>
+    

@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "61fd6a3718c33eab36791d73"
+  },
+  "path": [
+    "embone"
+  ],
+  "userName": "EmbOne Technologies",
+  "email": "rnd.embone@gmail.com",
+  "password": "$2a$10$me4jR.FLcLDfw.MVR0iqB.1pEH3OHtuBwmPKGNfLowi041UL5xYQi",
+  "phone": "+917385944691",
+  "createdBy": "Embone Technologies",
+  "createdDate": {
+    "$date": "2022-02-04T18:02:31.548Z"
+  },
+  "saltSecret": "$2a$10$me4jR.FLcLDfw.MVR0iqB.",
+  "__v": 0,
+  "companyName": "EmbOne Technologies",
+  "role": "Super Admin"
+},{
+  "_id": {
+    "$oid": "61fe6843ad1204271a2f892c"
+  },
+  "path": [
+    "embone/Technovision2 "
+  ],
+  "userName": "Supriya Dhere",
+  "email": "technosol@gmail.com",
+  "password": "$2a$10$SNtZcqc4qU3Hlpd1re7uOO2qhac3yNVLzwffZrQyr/DnYlkMQmnmy",
+  "phone": "+917385944634",
+  "role": "Engineer",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-02-05T12:06:27.178Z"
+  },
+  "saltSecret": "$2a$10$SNtZcqc4qU3Hlpd1re7uOO",
+  "__v": 0,
+  "companyName": "Technovision2"
+},{
+  "_id": {
+    "$oid": "6202317002374f570e6eb92f"
+  },
+  "path": [
+    "embone,Technovision1"
+  ],
+  "userName": "Sujit Dhere",
+  "email": "technovision@gmail.com",
+  "password": "$2a$10$vhuv4s3yIltaKLcZdCaosOtwFqMHJGoCXuoe4t/LrxDXlKsnbR4SW",
+  "phone": "+91738594469",
+  "role": "User",
+  "createdBy": "EmbOne Technologies",
+  "createdDate": {
+    "$date": "2022-02-08T09:01:36.501Z"
+  },
+  "saltSecret": "$2a$10$vhuv4s3yIltaKLcZdCaosO",
+  "__v": 0
+}]

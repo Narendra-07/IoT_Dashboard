@@ -1,0 +1,74 @@
+thead {
+    font-size: 17px;
+    /* background-color:rgba(248, 245, 245, 0.948); */ 
+ }
+    .table, th, td,tr {
+   border: 1px solid black;
+   padding: 20px;
+   text-align: center; 
+   /* margin-left: auto;
+   margin-right: auto; */
+}
+.mat-tab-group {
+ margin-bottom: 70px;
+}
+ button {
+   background: #fff;
+   color: #222;
+   border: 1px solid #e7e7e7;
+   border-bottom: 2px solid #ddd;
+   border-radius: 2px;
+   padding: 4px 17px;
+ } 
+ 
+  button.active {
+   color: #fff;
+   background: #008ffb;
+   border: 1px solid blue;
+   border-bottom: 2px solid blue;
+ }
+ .text-center1
+ {
+    /* background-color: white;
+    color: black; */
+    text-align: center;
+ }
+ .button:focus {
+  outline: 0;
+ }  
+
+/* .page-footer
+{
+   position: absolute;
+   color:#000;
+    padding-left: 3px;
+    font-family: FoundersGrotesk,Helvetica,Arial,sans-serif;
+    min-height:70px;
+} */
+.footer {
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+   z-index: 1;
+   /* display: inline-block;
+   margin-top: 2%; */
+ }
+ /* .DeviceName {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row; 
+ } */
+
+ /* .imgg { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+ } */
+ 
+ 

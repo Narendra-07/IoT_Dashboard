@@ -1,0 +1,186 @@
+<div style="width: 50%; float:left">
+  <h3>DeviceName: {{ displayDeviceName }}</h3>
+</div>
+
+<div style="width: 50%; float:right">
+  <h3>UID: {{ displayUID }}</h3>
+</div>
+
+<br style="clear:both;"/>
+
+
+<i class="fa fa-gear" style="font-size:24px;" (click)="go()"></i>
+
+
+<head>
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" > -->
+  <style>
+    /* body {
+      background: #AAAEF2;
+    } */
+    /* .tbl-container {
+      max-width: fit-content;
+      max-height: fit-content;
+    } */
+    .tbl-fixed {
+      overflow-x: scroll;
+      overflow-y: scroll;
+      height: fit-content;
+      max-height: 70vh;
+      margin-top: 40px;
+    }
+    table {
+      min-width: max-content;
+      border-collapse: separate;
+    }
+    table th {
+      position: sticky;
+      top: 0px;
+      background: #E8D468;
+      text-align: center;
+      /* color: #fff; */
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    table td {
+      background: #fff;
+      text-align: center;
+      border: 1px solid #ccc;
+    }
+  </style>
+</head>
+
+<mat-tab-group mat-align-tabs="start" (selectedTabChange)="updateOptions('all')">
+  <mat-tab label="Table"> 
+    <body>
+      <div class="container tbl-container">
+        <div class="row tbl-fixed">
+
+  <table class="table-striped table-condensed">
+  <thead>
+  <tr>
+  <th>DateTime</th> 
+  <th>D1</th>
+  <th>D2</th>
+  <th>D3</th>
+  <th>D4</th>
+  <th>D5</th>
+  <th>D6</th>
+  <th>D7</th>
+  <th>D8</th>
+  <th>D9</th>
+  <th>D10</th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <tr *ngFor = "let show of dataToShow">
+                 
+  <td>{{ show.DateTime }}</td>
+  <td>{{ show.D1 }}</td>
+  <td>{{ show.D2 }}</td>
+  <td>{{ show.D3 }}</td>
+  <td>{{ show.D4 }}</td>
+  <td>{{ show.D5 }}</td>
+  <td>{{ show.D6 }}</td>
+  <td>{{ show.D7 }}</td>
+  <td>{{ show.D8 }}</td>
+  <td>{{ show.D9 }}</td>
+  <td>{{ show.D10 }}</td>
+  </tr>
+  </tbody>
+  </table>
+  </div>
+  </div>
+  </body>
+  </mat-tab>
+
+  <mat-tab label="Graph"> 
+    
+    <button
+  (click)="updateOptions( '1m' )"
+  [class.active]="activeOptionButton=='1m'"
+>
+  1M
+  </button>
+
+  <button
+   (click)="updateOptions( '6m' )"
+  [class.active]="activeOptionButton=='6m'"
+  >
+  6M
+  </button>
+
+  <button
+  (click)="updateOptions( '1y' )"
+  [class.active]="activeOptionButton=='1y'"
+  >
+  1Y
+ </button>
+
+  <button
+  (click)="updateOptions( 'ytd' )"
+  [class.active]="activeOptionButton=='ytd'"
+  >
+  YTD
+  </button>
+  <button
+  (click)="updateOptions( 'all' )"
+  [class.active]="activeOptionButton=='all'"
+  >                                    
+  All
+  </button>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input [formGroup]="range" [rangePicker]="dateRangePicker">
+      <input matStartDate formControlName="start"
+        placeholder="Start date"
+        #dateRangeStart>
+      <input matEndDate formControlName="end"
+        placeholder="End date"
+        #dateRangeEnd
+        (dateChange)="dateRangeChange(dateRangeStart, dateRangeEnd)">
+    </mat-date-range-input>
+    <mat-datepicker-toggle matSuffix
+      [for]="dateRangePicker">
+    </mat-datepicker-toggle>
+    <mat-date-range-picker #dateRangePicker></mat-date-range-picker>
+  </mat-form-field>
+
+
+  
+
+    <!-- <p>Selected range: {{range.value | json}}</p> -->
+
+  <div id="chart">
+  <apx-chart
+  #chart
+  [series]="chartOptions.series"
+  [chart]="chartOptions.chart"
+  [dataLabels]="chartOptions.dataLabels"
+  [stroke]="chartOptions.stroke"
+  [grid]="chartOptions.grid"
+  [xaxis]="chartOptions.xaxis"
+  [title]="chartOptions.title"
+  [tooltip]="chartOptions.tooltip">
+  </apx-chart> 
+  </div>
+</mat-tab>     
+<mat-tab label="live">
+ <app-live-screen></app-live-screen>
+</mat-tab>
+</mat-tab-group>
+
+<div class="footer">
+ <div class="text-center1 p-3">  
+  © 2022 Copyright:embonetech.in
+ </div>
+ </div>
+   
+      
+         
+        
+      
+   

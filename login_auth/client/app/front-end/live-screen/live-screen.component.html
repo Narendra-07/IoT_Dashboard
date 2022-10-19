@@ -1,0 +1,113 @@
+<div style="width: 50%; float:left">
+<div class="deviceStatus">
+<h3>Device Status: &nbsp; 
+  <div class="deviceConnectedStyle" *ngIf="deviceStatus"> 
+  <h3>Device is connected</h3>
+  </div>
+  <div class="deviceNotonnectedStyle" *ngIf="!deviceStatus">
+    <h3>Device is not connected</h3>
+</div>
+</h3>
+</div> 
+</div>
+<div class="lastDate" style="width: 50%; float:right">
+  <h3>Last Updated Date:  &nbsp; <h4>{{tempDate}}</h4></h3>
+</div>
+<br style="clear:both;"/>
+
+<div style="width: 50%; float:left">
+<div class="dial">
+<div>
+<google-chart #googlechart  
+[type]="chart.type"
+[data]="chart.data"
+[options]="chart.options">
+</google-chart>
+</div>
+</div>
+</div>
+
+   <div style="width: 50%; float:right">
+<div class="speedometer">
+<div>
+   <rg-gauge-chart
+     [canvasWidth]="canvasWidth"      
+     [needleValue]=needleValue
+     [bottomLabel]=needleValue
+     [centralLabel]="centralLabel"
+     [options]="options"
+     >
+   </rg-gauge-chart>
+    <!-- [options.arcDelimiters]="50"  How to change this value in view-->
+ </div>
+ </div>
+ <!-- </div> -->
+
+ <!-- <div style="width: 50%; float:right"> -->
+ <div class="speedometer1">
+   <div>
+   <rg-gauge-chart
+     [canvasWidth]="canvasWidth"
+     [needleValue]=needleValue1
+     [bottomLabel]=needleValue1
+     [centralLabel]="centralLabel"
+     [options]="options"
+     >
+   </rg-gauge-chart>
+    <!-- [options.arcDelimiters]="50"  How to change this value in view-->
+ </div>
+ </div>
+ </div>
+<!-- </div> -->
+
+ <br style="clear:both;"/>
+
+<div class="squares">
+      <div class="pressure1">
+         <div class="pr">
+           pressure1
+            </div>
+            <div class="subpr">
+        <h1> {{valueOfPressure1}} </h1>
+        &nbsp;
+        &nbsp;
+        Bar
+        </div>
+      </div>
+
+      <div class="pressure2">
+         <div class="pr">
+         pressure2
+         </div>
+         <div class="subpr">
+        <h1> {{valueOfPressure2}} </h1>
+        &nbsp;
+        &nbsp;
+         Bar
+         </div>
+     </div>
+
+     <div class="pressure3">
+      <div class="pr">
+        pressure3
+         </div>
+         <div class="subpr">
+      <h1> {{valueOfPressure3}} </h1>
+      &nbsp;
+      &nbsp;
+      Bar
+      </div>
+    </div>
+
+    <div class="pressure4">
+      <div class="pr">
+         pressure4
+         </div>
+         <div class="subpr">
+      <h1> {{valueOfPressure4}} </h1>
+       &nbsp;
+       &nbsp;
+      Bar
+      </div>
+    </div>
+    

@@ -1,0 +1,74 @@
+<form #signUpForm="ngForm" (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
+
+  <div class="wrapper">
+    <div id="formContent">
+      <h2 class="underlineHover">Create User</h2>
+      <input type="text" #userName="ngModel" [(ngModel)]="usersService.selectedUser.userName" name="userName"
+        placeholder="user Name" required [ngClass]="{'invalid-textbox' :signUpForm.submitted && !userName.valid }"
+        autofocus>
+      <div *ngIf="signUpForm.submitted && !userName.valid">
+        <label class="validation-message">This field is required.</label>
+      </div>
+
+      <input type="text" #email="ngModel" [(ngModel)]="usersService.selectedUser.email" name="email" placeholder="Email"
+        required [pattern]="emailRegex" [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }">
+      <div *ngIf="signUpForm.submitted && email.errors">
+        <label *ngIf="email.errors.required" class="validation-message">This field is required.</label>
+        <label *ngIf="email.errors.pattern" class="validation-message">Invalid email address.</label>
+      </div>
+
+      <input type="password" #password="ngModel" [(ngModel)]="usersService.selectedUser.password" name="password"
+        placeholder="Password" minlength="4" required
+        [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }">
+      <div *ngIf="signUpForm.submitted && password.errors">
+        <label *ngIf="password.errors.required" class="validation-message">This field is required.</label>
+        <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4 characters.</label>
+      </div>
+
+      <input type="text" #phone="ngModel" [(ngModel)]="usersService.selectedUser.phone" name="phone" placeholder="Phone"
+        [ngClass]="{'invalid-textbox' :signUpForm.submitted && !phone.valid }">
+      <!-- required [pattern]="mobileNoPattern"  -->
+      <div *ngIf="signUpForm.submitted && phone.errors">
+        <label *ngIf="phone.errors.required" class="validation-message">This field is required.</label>
+        <!-- <label *ngIf="phone.errors.pattern" class="validation-message">Please enter 10 digit mobile number.</label> -->
+      </div>
+
+
+      <select class="custom-select" ngModel name="role">
+        <option value="" disabled selected hidden>Admin</option>
+        <option hidden="">Choose role</option>
+        <option *ngFor="let userRole of userRoles" [value]="userRole.RoleName" >
+          {{userRole.RoleName}}
+        </option>
+      </select>
+        <div hidden = "companyName">
+      <select class="company-select" ngModel name="companyName">
+        <option value="" disabled selected hidden>Choose company</option>
+        <option hidden="">Choose company</option>
+        <option *ngFor="let company_name of company_names" [value]="company_name.company_name">
+          {{company_name.company_name}}
+        </option>
+       </select>
+       </div>
+
+         <div hidden="createdBy">
+      <input type="text" #createdBy="ngModel" [(ngModel)]="tokenValue" name="createdBy" required>
+         </div>
+         <div hidden="path">
+      <input type="text" [(ngModel)]="path" name="path" required>
+        </div>
+
+      <input type="submit" value="Create User">
+    </div>
+  </div>
+</form>
+
+<!-- Success message -->
+<div class="success" *ngIf="showSucessMessage">
+  Saved successfully
+</div>
+
+<!-- Error message -->
+<div class="alert" *ngIf="serverErrorMessages">
+  {{serverErrorMessages}}
+</div>

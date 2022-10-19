@@ -1,0 +1,29 @@
+[{
+  "_id": {
+    "$oid": "61d9382a4c1cb61ae45a376d"
+  },
+  "Role_Id": "1",
+  "RoleName": "Super Admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d938354c1cb61ae45a376f"
+  },
+  "Role_Id": "2",
+  "RoleName": "Admin",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d9386b4c1cb61ae45a3771"
+  },
+  "Role_Id": "3",
+  "RoleName": "Engineer",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61d93a1c484daff88fd97869"
+  },
+  "Role_Id": "4",
+  "RoleName": "User",
+  "__v": 0
+}]

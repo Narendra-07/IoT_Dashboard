@@ -1,0 +1,43 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<mat-toolbar color="primary" class="header">
+  <div>IIoT Dashboard</div>
+  <span class="nav-tool-items">
+        
+    <div class="btn" style="flex-direction: row; margin: left=2px;margin: right=2px;">
+      <button  [hidden]="isDisabled" class="loginBtn" style="margin-right:16px"  mat-raised-button type="button" routerLinkActive="active" routerLink="/signup"><i class="fa fa-plus" style="margin-right:6px;font-size:15px;margin-bottom:2px;color:rgb(230, 116, 135)"></i>Add
+        User</button>
+      <button  [hidden]="isDisabled" class="loginBtn" style="margin-right:16px" mat-raised-button type="button" routerLinkActive="active" routerLink="/add-customer"><i class="fa fa-plus" style="margin-right:6px;font-size:15px;margin-bottom:2px;color:rgb(230, 116, 135)"></i>Add
+        Customer</button>
+        <button [hidden]="hide" class="loginBtn" style="margin-right:16px" mat-raised-button type="button" routerLinkActive="active" routerLink="/add-device"><i class="fa fa-plus" style="margin-right:6px;font-size:15px;margin-bottom:2px;color:rgb(230, 116, 135)"></i>Add
+          Device</button>
+          
+        <!-- <button class="loginBtn" mat-raised-button type="button" routerLinkActive="active" routerLink="/">
+          Sign Up</button> -->
+      <button class="loginBtn" mat-raised-button type="button" (click)="onLogout()" value="Logout"><i class="fa fa-sign-out" style="margin-right:5px;font-size:20px;color:rgb(230, 116, 135)"></i>Logout</button>
+    </div>
+    <mat-icon (click)="sidenav.toggle()" class="hamburger">menu</mat-icon>
+  </span>
+</mat-toolbar>
+
+<mat-sidenav-container>
+  <!--  Sidenav -->
+  <mat-sidenav #sidenav [mode]="isBiggerScreen() ? 'over' : 'side'" [(opened)]="opened" [fixedInViewport]="true"
+    [fixedTopGap]>
+    <mat-nav-list>
+        
+      <app-angular-tree></app-angular-tree>
+      
+    </mat-nav-list>
+
+  </mat-sidenav>
+   
+  <!-- Main content -->
+  <mat-sidenav-content>
+    <!-- <app-add-customer></app-add-customer> -->
+    <!-- <a routerLinkActive="active" routerLink="/devicedata">getDeviceData</a> -->
+    <router-outlet></router-outlet>
+    <!-- <app-device-data></app-device-data> -->
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
+<!-- <router-outlet ></router-outlet> -->

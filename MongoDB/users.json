@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "61fa2cad0ffcba4e7bc17b8d"
+  },
+  "email": "info.embone@gmail.com",
+  "password": "$2a$10$VD41frQotAvz.xOqbR2sY.zXueMcTKW.1IvcRGXB2zEQFp9x55ZLS",
+  "path": "embone",
+  "saltSecret": "$2a$10$VD41frQotAvz.xOqbR2sY.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fa4939e619e3b84c29624c"
+  },
+  "email": "embone@gmail.com",
+  "password": "$2a$10$JajLURp4pI/me0zuxP0cN.5QStxfps1mq0NR7.AS5jOuagUAlxStO",
+  "path": "embone",
+  "saltSecret": "$2a$10$JajLURp4pI/me0zuxP0cN.",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fb5d6262d48f17b9d5dcb1"
+  },
+  "email": "sonalimagar0110@gmail.com",
+  "password": "$2a$10$WCqZj5zkdk37nN3/sTcFteFLS1.kx0SyY6rTIdHO8A7cqC01FrZiu",
+  "path": "embone",
+  "saltSecret": "$2a$10$WCqZj5zkdk37nN3/sTcFte",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61fcc7977cce1aa58144d779"
+  },
+  "email": "sonali@gmail.com",
+  "password": "$2a$10$WlGdR8JFApheDjSaBEtj..8gRcWRCfoIm/q.Tt8zGfb2x0/.lFtz2",
+  "path": "cognizant",
+  "saltSecret": "$2a$10$WlGdR8JFApheDjSaBEtj..",
+  "__v": 0
+}]
